@@ -1,8 +1,7 @@
 # Prims_Algorithm_visualiser
 Visualises spanning tree found using prims algorithm using openGL
 
-Features
----------
+## Features
 Run
 Undo
 Redo
@@ -11,10 +10,9 @@ Draw Edges
 Print cost matrix
 Spanning Tree calculation
 
-Algorithm used
----------------
+# Algorithm used
 
-##Prims Algorithm
+## Prims Algorithm
   The algorithm may informally be described as performing the following steps:
 
   1. Initialize a tree with a single vertex, chosen arbitrarily from the graph.
@@ -23,15 +21,13 @@ Algorithm used
   3. Repeat step 2 (until all vertices are in the tree).
   
 
-**Functions**
--------------
+## Functions
 1. int_str()
 
-  **signature:**
+  ### signature:
    void int_str(int rad,char r[]) 
    
-  ###Description:
-  -----------
+  ### Description:
   This functions writes the integer into char array
 
 2. push()
