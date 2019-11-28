@@ -2,13 +2,13 @@
 Visualises spanning tree found using prims algorithm using openGL
 
 ## Features
-Run
-Undo
-Redo
-Draw Nodes
-Draw Edges
-Print cost matrix
-Spanning Tree calculation
+- Run
+- Undo
+- Redo
+- Draw Nodes
+- Draw Edges
+- Print cost matrix
+- Spanning Tree calculation
 
 # Algorithm used
 
