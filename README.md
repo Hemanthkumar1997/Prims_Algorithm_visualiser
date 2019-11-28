@@ -24,6 +24,7 @@ Algorithm used
   
 
 **Functions**
+-------------
 1. int_str()
 
   **signature:**
