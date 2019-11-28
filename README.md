@@ -14,7 +14,7 @@ Spanning Tree calculation
 Algorithm used
 ---------------
 
-**Prims Algorithm**
+##Prims Algorithm
   The algorithm may informally be described as performing the following steps:
 
   1. Initialize a tree with a single vertex, chosen arbitrarily from the graph.
