@@ -14,7 +14,7 @@ Spanning Tree calculation
 Algorithm used
 ---------------
 
-Prims Algorithm
+##Prims Algorithm
 ----------------
   The algorithm may informally be described as performing the following steps:
 
@@ -24,245 +24,245 @@ Prims Algorithm
   3. Repeat step 2 (until all vertices are in the tree).
   
 
-Functions
+##Functions
 ---------
 1. int_str()
 
-  signature:
+  ###signature:
   ----------
    void int_str(int rad,char r[]) 
    
-  Description:
+  ###Description:
   -----------
   This functions writes the integer into char array
 
 2. push()
   
-  signature:
+  ###signature:
   ----------
   void push(int n)
   
-  Description:
+  ###Description:
   -----------
   whenever undo function is called the cost is pushed into the stack
   
 3. pop()
 
-  signature:
+  ###signature:
   ----------
   int pop()
   
-  Description:
+  ###Description:
   -----------
   when redo function is called the cost is popped out
 
 4. drawpoint()
   
-  signature:
+  ###signature:
   ----------
   void drawpoint()
   
-  Description:
+  ###Description:
   -----------
   this function creates nodes using location stored in oldx[][] array
   
 5. bitmap_output()
   
-  signature:
+  ###signature:
   ----------
   void bitmap_output(int x, int y, char *string, void *font)
   
-  Description:
+  ###Description:
   -----------
   This function prints text in graphics window
   
 6. delay()
 
-  signature:
+  ###signature:
   ----------
   void delay()
   
-  Description:
+  ###Description:
   -----------
   this delays out execution of next instruction
 
 7. frontpage()
 
-  signature:
+  ###signature:
   ----------
   void frontpage()
   
-  Description:
+  ###Description:
   -----------
   this function displays staring window
 
 8. Instructions()
 
-  signature:
+  ###signature:
   ----------
   void Instructions()
   
-  Description:
+  ###Description:
   -----------
   this function displays text instructions in grpahics windwow
   
 9. drawline()
 
-  signature:
+  ###signature:
   ----------
   void drawline()
   
-  Description:
+  ###Description:
   -----------
   this function draws edges using location stored in linex array
 
 10. blinking_lines()
 
-  signature:
+  ###signature:
   ----------
   void blinking_lines()
   
-  Description:
+  ###Description:
   -----------
   this function does animation of lines connecting after calculating spanning tree
 
 11. drawPointAt()
 
-  signature:
+  ###signature:
   ----------
   void drawPointAt(float x,float y)
   
-  Description:
+  ###Description:
   -----------
   this displays a point when mouse clicked for first time in draw edge mode
 
 12. loadpage()
 
-  signature:
+  ###signature:
   ----------
   void loadpage()
   
-  Description:
+  ###Description:
   -----------
   this function mimics loading animation
 
 13. output()
 
-  signature:
+  ###signature:
   ----------
   void output()
   
-  Description:
+  ###Description:
   -----------
   this function displays text output after calculating spanning tree
   
 14. display()
 
-  signature:
+  ###signature:
   ----------
   void display()
   
-  Description:
+  ###Description:
   -----------
   this is callback function called by OpenGL 
   
 15. reshape()
 
-  signature:
+  ###signature:
   ----------
   void reshape(int w, int h)
   
-  Description:
+  ###Description:
   -----------
   this is reshape callback function called by OpenGL whenever window is resized
   
 16. input()
 
-  signature:
+  ###signature:
   ----------
   void input()
   
-  Description:
+  ###Description:
   -----------
   this function takes cost input from user during edge drawing
   
 17. mousefun()
 
-  signature:
+  ###signature:
   ----------
   void mousefun(int button,int state,int x,int y)
   
-  Description:
+  ###Description:
   -----------
   this is mouse callback function called by OpenGL whenever mouse event occurs
   
 18. printmatrix()
 
-  signature:
+  ###signature:
   ----------
   void printmatrix()
   
-  Description:
+  ###Description:
   -----------
   this function will print matrix constructed
   
 19. isconnected()
  
-  signature:
+  ###signature:
   ----------
   bool isconnected()
   
-  Description:
+  ###Description:
   -----------
   this checks if the graph is connected or not
   
 20. undo()
 
-  signature:
+  ###signature:
   ----------
   void undo()
   
-  Description:
+  ###Description:
   -----------
   this undo the drawing in the order the graph was drawn
   
 21. redo()
 
-  signature:
+  ###signature:
   ----------
   void redo()
   
-  Description:
+  ###Description:
   -----------
   this redo the drawing in the order the graph was drawn
   
 22. find()
 
-  signature:
+  ###signature:
   ----------
   void find()
   
-  Description:
+  ###Description:
   -----------
   this will call find_spanning_tree function if graph is connected
 
 23. selectedge() 
 
-  signature:
+  ###signature:
   ----------
   void selectedge()
   
-  Description:
+  ###Description:
   -----------
   this will select edge draw mode 
 
 24. selectnode()
 
-  signature:
+  ###signature:
   ----------
   void selectnode()
   
-  Description:
+  ###Description:
   -----------
   this will select node draw mode 
 
