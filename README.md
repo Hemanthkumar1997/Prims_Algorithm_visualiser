@@ -1,4 +1,4 @@
-# Prims_Algorithm_visualiser
+# Prims Algorithm visualiser
 Visualises spanning tree found using prims algorithm using openGL
 
 ## Features
