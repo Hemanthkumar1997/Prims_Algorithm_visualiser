@@ -22,12 +22,12 @@ Spanning Tree calculation
   
 
 ## Functions
-### 1. int_str()
+#### 1. int_str()
 
-  #### signature:
+  ##### signature:
    void int_str(int rad,char r[]) 
    
-  #### Description:
+  ##### Description:
   This functions writes the integer into char array
 
 2. push()
