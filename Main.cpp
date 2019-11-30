@@ -1,5 +1,6 @@
-#include<glut.h>
+#include<GLUT/glut.h>
 #include<iostream>
+#include<math.h>
 
 using namespace std;
 
@@ -24,7 +25,7 @@ GLfloat width=900,height=600;
 //This functions writes the integer into char array
 void int_str(int rad,char r[])
 {
-	itoa(rad,r,10);
+	sprintf(r,"%s",rad);
 }
 
 //whenever undo function is called the cost is pushed into the stack
@@ -142,7 +143,7 @@ void drawline(){
 	glColor3f(0.0,1.0,0.0);
 	for(int i=0;i<lpointer;i++){
 		temp=costmatrix[lineundostack[i][0]][lineundostack[i][1]];
-		itoa(temp,cst,10);
+		sprintf(cst, "%s", temp);
 		bitmap_output((linex[i][0]+linex[i][2])/2-15,(linex[i][1]+linex[i][3])/2+15,cst,GLUT_BITMAP_TIMES_ROMAN_24);
 	}
 	glutSwapBuffers();
@@ -213,18 +214,18 @@ void output(){
 	char* a=new char[50];
 	char* b = new char[50];
 	for(int i=0;i<pointer-1;i++){
-		itoa(t[i][0],a,10);
+		sprintf(a, "%s", t[i][0]);
 		strcat(a,"->");
-		itoa(t[i][1],b,10);
+		sprintf(b, "%s", t[i][1]);
 		strcat(a,b);
-		itoa(costmatrix[t[i][0]][t[i][1]],cst,10);
+		sprintf(cst, "%s", costmatrix[t[i][0]][t[i][1]]);
 		strcat(a," cost=");
 		strcat(a,cst);
 		yaxis-=20;
 		bitmap_output(xaxis,yaxis,a,GLUT_BITMAP_HELVETICA_18);
 	}
 	char sumchar[50];
-	itoa(totalcost,buffer,10);
+	sprintf(buffer,"%s", totalcost);
 	strcat(sumchar,"spanning tree cost=");
 	strcat(sumchar,buffer);
 	bitmap_output(xaxis,yaxis-20,sumchar,GLUT_BITMAP_HELVETICA_18);
