@@ -25,7 +25,7 @@ GLfloat width=900,height=600;
 //This functions writes the integer into char array
 void int_str(int rad,char r[])
 {
-	sprintf(r,"%s",rad);
+	sprintf(r,"%d",rad);
 }
 
 //whenever undo function is called the cost is pushed into the stack
@@ -143,7 +143,7 @@ void drawline(){
 	glColor3f(0.0,1.0,0.0);
 	for(int i=0;i<lpointer;i++){
 		temp=costmatrix[lineundostack[i][0]][lineundostack[i][1]];
-		sprintf(cst, "%s", temp);
+		sprintf(cst, "%d", temp);
 		bitmap_output((linex[i][0]+linex[i][2])/2-15,(linex[i][1]+linex[i][3])/2+15,cst,GLUT_BITMAP_TIMES_ROMAN_24);
 	}
 	glutSwapBuffers();
@@ -214,18 +214,18 @@ void output(){
 	char* a=new char[50];
 	char* b = new char[50];
 	for(int i=0;i<pointer-1;i++){
-		sprintf(a, "%s", t[i][0]);
+		sprintf(a, "%d", t[i][0]);
 		strcat(a,"->");
-		sprintf(b, "%s", t[i][1]);
+		sprintf(b, "%d", t[i][1]);
 		strcat(a,b);
-		sprintf(cst, "%s", costmatrix[t[i][0]][t[i][1]]);
+		sprintf(cst, "%d", costmatrix[t[i][0]][t[i][1]]);
 		strcat(a," cost=");
 		strcat(a,cst);
 		yaxis-=20;
 		bitmap_output(xaxis,yaxis,a,GLUT_BITMAP_HELVETICA_18);
 	}
 	char sumchar[50];
-	sprintf(buffer,"%s", totalcost);
+	sprintf(buffer,"%d", totalcost);
 	strcat(sumchar,"spanning tree cost=");
 	strcat(sumchar,buffer);
 	bitmap_output(xaxis,yaxis-20,sumchar,GLUT_BITMAP_HELVETICA_18);
@@ -296,16 +296,17 @@ void reshape(int w, int h)
 void input(){
 	int posi=-1,posj=-1;
 	int cost;
+	int center_difference_error = 4;
 	for(int i=0;i<pointer;i++){
-		if(oldx[i][0]>=(linepoints[0][0]-4)&&oldx[i][0]<=(linepoints[0][0]+4)){
-			if(oldx[i][1]>=(linepoints[0][1]-4)&&oldx[i][1]<=(linepoints[0][1]+4)){
+		if(oldx[i][0]>=(linepoints[0][0]-center_difference_error)&&oldx[i][0]<=(linepoints[0][0]+center_difference_error)){
+			if(oldx[i][1]>=(linepoints[0][1]-center_difference_error)&&oldx[i][1]<=(linepoints[0][1]+center_difference_error)){
 		       posi=i;
 			   break;}
 	    }
 	}
 	for(int i=0;i<pointer;i++){
-		if(oldx[i][0]>=(linepoints[1][0]-4)&&oldx[i][0]<=(linepoints[1][0]+4)){
-			if(oldx[i][1]>=(linepoints[1][1]-4)&&oldx[i][1]<=(linepoints[1][1]+4)){
+		if(oldx[i][0]>=(linepoints[1][0]-center_difference_error)&&oldx[i][0]<=(linepoints[1][0]+center_difference_error)){
+			if(oldx[i][1]>=(linepoints[1][1]-center_difference_error)&&oldx[i][1]<=(linepoints[1][1]+center_difference_error)){
 		       posj=i;
 			break;
 			}
