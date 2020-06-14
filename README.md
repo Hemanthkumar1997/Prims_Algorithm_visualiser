@@ -1,6 +1,10 @@
 # Prims Algorithm visualiser
 Visualises spanning tree found using prims algorithm using openGL
 
+
+### Note
+* if you are unable to draw vertices increase center_difference_error value in the code.
+
 ## Features
 - Run
 - Undo
