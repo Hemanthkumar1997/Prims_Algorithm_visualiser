@@ -2,7 +2,15 @@
 Visualises spanning tree found using prims algorithm using openGL
 
 
-### Note
+### How to run
+* install openGL libraries
+* if you are using linux based os use "g++ filename.cpp -o gl -lGL -lGLU - lglut" to compile and ./a.out for running program
+
+### Note 
+* if nothing appears after welcome screen 
+  - change glutInitDisplayMode(GLUT_DOUBLE) to glutInitDisplayMode(GLUT_SINGLE) 
+  - replace all glutswapbuffer() with glFlush()
+  - this might change shape of point to rectangle than circle thus you can define your own function to draw circle instead of point in place of draw edge function
 * if you are unable to draw vertices increase center_difference_error value in the code.
 
 ## Features
